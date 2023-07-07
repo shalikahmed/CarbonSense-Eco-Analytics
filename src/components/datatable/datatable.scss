@@ -1,0 +1,60 @@
+.map-container {
+  margin-bottom: 20px;
+}
+
+.location-input {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.location-textbox {
+  padding: 8px 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-right: 10px;
+}
+
+.search-button {
+  padding: 8px 16px;
+  background-color: #27ae60;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.search-button:hover {
+  color: #ffffff;
+  background-color: #0b5c3d;
+}
+.district-info {
+  background-color: #f5f5f5;
+  padding: 20px;
+  border-radius: 5px;
+  margin-top: 20px;
+
+  h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
+  }
+
+  p {
+    margin-bottom: 8px;
+    color: #555;
+    border-radius: 45px;
+  }
+
+  .description {
+    font-style: italic;
+  }
+}
+.react-autosuggest__suggestion {
+  cursor: pointer;
+}
+
+.react-autosuggest__suggestion--highlighted {
+  background-color: lightgray;
+}
