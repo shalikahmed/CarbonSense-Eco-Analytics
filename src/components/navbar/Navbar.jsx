@@ -1,3 +1,4 @@
+import React, { useContext } from "react";
 import "./navbar.scss";
 import SearchOutlinedIcon from "@mui/icons-material/SearchOutlined";
 import LanguageOutlinedIcon from "@mui/icons-material/LanguageOutlined";
@@ -7,10 +8,10 @@ import NotificationsNoneOutlinedIcon from "@mui/icons-material/NotificationsNone
 import ChatBubbleOutlineOutlinedIcon from "@mui/icons-material/ChatBubbleOutlineOutlined";
 import ListOutlinedIcon from "@mui/icons-material/ListOutlined";
 import { DarkModeContext } from "../../context/darkModeContext";
-import { useContext } from "react";
-
+import { userData } from "../datatable/userdata";
 const Navbar = () => {
   const { dispatch } = useContext(DarkModeContext);
+  const user = userData[0]; // Assuming the user data is stored at index 0
 
   return (
     <div className="navbar">
@@ -19,8 +20,9 @@ const Navbar = () => {
           <input type="text" placeholder="Search..." />
           <SearchOutlinedIcon />
         </div>
+        <span className="welcome">Welcome, {user.name}</span>
         <div className="items">
-          <div className="item">
+        <div className="item">
             <LanguageOutlinedIcon className="icon" />
             English
           </div>
